@@ -1,12 +1,13 @@
 // Input device configuration.
 include "input.kdl"
-// Натсройка Монитора
+// Настройка Монитора
 include "monitor.kdl"
 include "layout.kdl"
 // Автозапуск
 include "startup.kdl"
 include "windowrule.kdl"
 include "keybinds.kdl"
+include "niri-colors.kdl"
 
 // Путь для скриншотов
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"

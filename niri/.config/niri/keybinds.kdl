@@ -7,6 +7,8 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+X hotkey-overlay-title="Run an Application: Tg" {spawn "freshGram";}
+    Mod+B hotkey-overlay-title="Run an Application: Firefox" {spawn "firefox";}
+    
 
     //Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 

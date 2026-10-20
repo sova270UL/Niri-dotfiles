@@ -1,0 +1,10 @@
+backend = "fastresize"
+color_space = "lab"
+palette = "dark16"
+check_contrast = true
+
+[templates]
+quickshell = { template = "colors.json", target = "~/dotfiles/quickshell/.config/quickshell/lab/theme/colors.json" }
+mako = { template = "mako.tmpl", target = "~/dotfiles/mako/.config/mako/config" }
+fuzzel = { template = "fuzzel.tmpl", target = "~/dotfiles/fuzzel/.config/fuzzel/fuzzel.ini" }
+niri = { template = "niri-colors.kdl", target = "~/dotfiles/niri/.config/niri/niri-colors.kdl" }

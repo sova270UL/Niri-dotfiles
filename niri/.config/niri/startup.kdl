@@ -1,3 +1,4 @@
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "io.github.snowyfluffy.freshgram"
 spawn-at-startup "steam"
+spawn-at-startup "awww-daemon"
