@@ -1,0 +1,10 @@
+# кэши и мусор
+*.log
+*.bak
+.cache/
+__pycache__/
+
+# секреты
+*.key
+*.pem
+.env

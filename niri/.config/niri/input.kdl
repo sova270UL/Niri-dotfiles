@@ -1,0 +1,20 @@
+input {
+    keyboard {
+        xkb {
+        }
+
+        // Enable numlock on startup, omitting this setting disables it.
+        numlock
+    }
+
+    mouse {
+        // off
+        // natural-scroll
+        // accel-speed 0.2
+        // accel-profile "flat"
+        // scroll-method "no-scroll"
+    }
+    focus-follows-mouse
+    //max-scroll-amount="0%" 
+    
+}
