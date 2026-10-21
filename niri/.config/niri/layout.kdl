@@ -100,8 +100,8 @@ layout {
 
 	// Отступы по краям экрана для сосдних окон
     struts {
-        left 30
-        right 30
+        left 20
+        right 20
         // top 64
         // bottom 64
     }
