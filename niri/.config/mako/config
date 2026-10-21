@@ -1,12 +1,12 @@
 font=sans-serif 11
-background-color=#0E0E0Fd9
-text-color=#DDEEF4
-border-color=#A36F84
+background-color=#121212d9
+text-color=#FFFAE4
+border-color=#828385
 border-size=2
 border-radius=9
 padding=12
 default-timeout=5000
 
 [urgency=high]
-border-color=#90515A
+border-color=#7C5254
 default-timeout=0
