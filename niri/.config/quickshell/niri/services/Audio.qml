@@ -27,9 +27,5 @@ Singleton {
         if (ready) sink.audio.muted = !sink.audio.muted
     }
 
-    function openPusle() {
-        if (ready) sink.audio.muted = !sink.audio.muted
-    }
-
     PwObjectTracker { objects: [root.sink] }
 }

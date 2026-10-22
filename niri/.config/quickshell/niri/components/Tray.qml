@@ -2,6 +2,8 @@ import QtQuick
 import Quickshell
 import Quickshell.Services.SystemTray
 
+
+
 Capsule {
     visible: repeater.count > 0
 
@@ -21,10 +23,13 @@ Capsule {
                 sourceSize: Qt.size(14, 14)
                 source: modelData.icon
 
-                function openMenu() {
-                    if (!modelData.hasMenu) return
-                    const pos = icon.mapToItem(null, 0, 0)
-                    modelData.display(QsWindow.window, pos.x, QsWindow.window.height)
+                QsMenuAnchor {
+                    id: menu
+                    menu: icon.modelData.menu
+                    anchor.item: icon
+                    anchor.edges: Edges.Bottom | Edges.Left
+                    anchor.gravity: Edges.Bottom | Edges.Right
+                    anchor.rect.height: icon.height + 6
                 }
 
                 MouseArea {
@@ -33,12 +38,13 @@ Capsule {
                     cursorShape: Qt.PointingHandCursor
 
                     onClicked: mouse => {
+                        const item = icon.modelData
                         if (mouse.button === Qt.MiddleButton) {
-                            icon.modelData.secondaryActivate()
-                        } else if (mouse.button === Qt.RightButton || icon.modelData.onlyMenu) {
-                            icon.openMenu()
+                            item.secondaryActivate()
+                        } else if ((mouse.button === Qt.RightButton || item.onlyMenu) && item.hasMenu) {
+                            menu.open()
                         } else {
-                            icon.modelData.activate()
+                            item.activate()
                         }
                     }
                     onWheel: wheel => icon.modelData.scroll(wheel.angleDelta.y, false)
