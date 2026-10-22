@@ -1,6 +1,5 @@
 import QtQuick
 import Quickshell
-import qs.theme
 
 Capsule {
     SystemClock {
@@ -8,10 +7,5 @@ Capsule {
         precision: SystemClock.Minutes
     }
 
-    Text {
-        text: Qt.formatDateTime(clock.date, "HH:mm")
-        color: Colors.foreground
-        font.family: "Noto Sans Mono"
-        font.pixelSize: 14
-    }
+    BarText { text: Qt.formatDateTime(clock.date, "HH:mm") }
 }

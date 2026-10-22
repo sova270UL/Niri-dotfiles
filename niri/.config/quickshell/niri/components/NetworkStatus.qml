@@ -7,10 +7,8 @@ Capsule {
     clickable: true
     onClicked: Quickshell.execDetached(["kitty", "--class", "nmtui", "nmtui"])
 
-    Text {
+    BarText {
         text: Net.icon
         color: Net.online ? Colors.foreground : Colors.accent
-        font.family: "Noto Sans Mono"
-        font.pixelSize: 14
     }
 }

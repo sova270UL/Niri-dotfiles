@@ -1,6 +1,7 @@
 import QtQuick
 import Quickshell
 import Quickshell.Services.SystemTray
+import qs.theme
 
 
 
@@ -8,7 +9,7 @@ Capsule {
     visible: repeater.count > 0
 
     Row {
-        spacing: 6
+        spacing: Theme.innerSpacing
 
         Repeater {
             id: repeater
@@ -18,9 +19,9 @@ Capsule {
                 id: icon
                 required property var modelData
 
-                width: 14
-                height: 14
-                sourceSize: Qt.size(14, 14)
+                width: Theme.iconSize
+                height: Theme.iconSize
+                sourceSize: Qt.size(Theme.iconSize, Theme.iconSize)
                 source: modelData.icon
 
                 QsMenuAnchor {

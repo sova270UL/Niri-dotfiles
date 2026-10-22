@@ -4,7 +4,7 @@ import qs.theme
 Rectangle {
     id: root
     default property alias content: row.data
-    property int padding: 10
+    property int padding: Theme.capsulePadding
     property bool clickable: false
 
     readonly property bool hovered: mouse.containsMouse
@@ -12,11 +12,12 @@ Rectangle {
     signal scrolled(int delta)
 
     implicitWidth: row.implicitWidth + padding * 2
-    implicitHeight: 17
+    implicitHeight: Theme.capsuleHeight
     radius: height / 2
-    color: Qt.alpha(Colors.foreground, clickable && hovered ? 0.24 : 0.12)
+    color: Qt.alpha(Colors.foreground,
+        clickable && hovered ? Theme.capsuleHoverOpacity : Theme.capsuleOpacity)
 
-    Behavior on color { ColorAnimation { duration: 150 } }
+    Behavior on color { ColorAnimation { duration: Theme.animationMs } }
 
     MouseArea {
         id: mouse

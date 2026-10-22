@@ -7,22 +7,22 @@ PanelWindow {
     screen: modelData
 
     anchors { top: true; left: true; right: true }
-    margins { top: 4; left: 7; right: 7 }
-    implicitHeight: 25
+    margins { top: Theme.barMargin; left: Theme.gap; right: Theme.gap }
+    implicitHeight: Theme.barHeight
     color: "transparent"
 
     Rectangle {
         anchors.fill: parent
-        radius: 9
-        color: Qt.alpha(Colors.background, 0.5)
-        border.width: 2
+        radius: Theme.radius
+        color: Qt.alpha(Colors.background, Theme.barOpacity)
+        border.width: Theme.borderWidth
         border.color: Colors.accent
 
         // левый край
         Row {
-            spacing: 5
+            spacing: Theme.spacing
             anchors.left: parent.left
-            anchors.leftMargin: 5
+            anchors.leftMargin: Theme.spacing
             anchors.verticalCenter: parent.verticalCenter
 
             Capsule {
@@ -30,9 +30,9 @@ PanelWindow {
             }
         }
 
-        // Центр
+        // центр
         Row {
-            spacing: 5
+            spacing: Theme.spacing
             anchors.centerIn: parent
 
             Clock {}
@@ -40,17 +40,14 @@ PanelWindow {
 
         // правый край
         Row {
-            spacing: 5
+            spacing: Theme.spacing
             anchors.right: parent.right
-            anchors.rightMargin: 5
+            anchors.rightMargin: Theme.spacing
             anchors.verticalCenter: parent.verticalCenter
 
-            Tray{}
-
+            Tray {}
             KeyboardLayout {}
-
             Volume {}
-
             NetworkStatus {}
         }
     }
