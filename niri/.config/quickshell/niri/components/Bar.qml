@@ -11,32 +11,47 @@ PanelWindow {
     implicitHeight: 25
     color: "transparent"
 
-    SystemClock {
-        id: clock
-        precision: SystemClock.Minutes
-    }
-
     Rectangle {
         anchors.fill: parent
         radius: 9
-        color: Qt.alpha(Colors.background, 0.85)
+        color: Qt.alpha(Colors.background, 0.5)
         border.width: 2
         border.color: Colors.accent
 
-
-        Workspaces {
-            output: modelData.name
+        // левый край
+        Row {
+            spacing: 5
             anchors.left: parent.left
-            anchors.leftMargin: 14
+            anchors.leftMargin: 5
             anchors.verticalCenter: parent.verticalCenter
+
+            Capsule {
+                Workspaces { output: modelData.name }
+            }
         }
 
-        Text {
+        // Центр
+        Row {
+            spacing: 5
             anchors.centerIn: parent
-            text: Qt.formatDateTime(clock.date, "HH:mm")
-            color: Colors.foreground
-            font.family: "Noto Sans Mono"
-            font.pixelSize: 14
+
+            Clock {}
+        }
+
+        // правый край
+        Row {
+            spacing: 5
+            anchors.right: parent.right
+            anchors.rightMargin: 5
+            anchors.verticalCenter: parent.verticalCenter
+
+            Tray{}
+
+            KeyboardLayout {}
+
+            Volume {}
+
+            NetworkStatus {}
         }
     }
 }

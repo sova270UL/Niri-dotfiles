@@ -7,6 +7,10 @@ Singleton {
     id: root
 
     property var workspaces: []
+    property var layouts: []
+    property int layoutIdx: 0
+    readonly property string layoutCode: layouts.length > 0
+        ? layouts[layoutIdx].slice(0, 2).toUpperCase() : ""
 
     function workspacesFor(output) {
         return workspaces
@@ -27,6 +31,12 @@ Singleton {
                 if (ev.focused) copy.is_focused = (w.id === ev.id)
                 return copy
             })
+        } else if (event.KeyboardLayoutsChanged) {
+            const k = event.KeyboardLayoutsChanged.keyboard_layouts
+            layouts = k.names
+            layoutIdx = k.current_idx
+        } else if (event.KeyboardLayoutSwitched) {
+            layoutIdx = event.KeyboardLayoutSwitched.idx
         }
     }
 
