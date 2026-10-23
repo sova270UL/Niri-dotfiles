@@ -21,5 +21,15 @@ Singleton {
     readonly property real capsuleOpacity: 0.12
     readonly property real capsuleHoverOpacity: 0.24
 
+    readonly property int panelWidth: 520
+    readonly property int panelPadding: 10
+    readonly property real panelTopRatio: 0.2
+    readonly property real panelOpacity: 0.85
+
+    readonly property int rowHeight: 34
+    readonly property int rowIconSize: 24
+    readonly property int maxRows: 8
+    readonly property real selectionOpacity: 0.3
+
     readonly property int animationMs: 150
 }
