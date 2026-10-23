@@ -1,12 +1,39 @@
-font=sans-serif 11
-background-color=#{{background | strip}}d9
+# Mako Configuration Template (Wallust)
+# Synced with tokens from quickshell/niri/theme/Theme.qml
+# Radius: 9 | Border: 2px | Margin: 7px | Padding: 10px | Opacity: 0.5 (80)
+
+font=Noto Sans Mono 11
+background-color=#{{background | strip}}80
 text-color=#{{foreground | strip}}
 border-color=#{{color4 | strip}}
 border-size=2
 border-radius=9
-padding=12
+margin=7
+padding=10
+width=320
+icons=1
+max-icon-size=32
+icon-border-radius=6
+default-timeout=5000
+group-by=app-name
+layer=overlay
+anchor=top-right
+
+[urgency=low]
+border-color=#{{color8 | strip}}
+default-timeout=3000
+
+[urgency=normal]
+border-color=#{{color4 | strip}}
 default-timeout=5000
 
 [urgency=high]
 border-color=#{{color1 | strip}}
 default-timeout=0
+
+[urgency=critical]
+border-color=#{{color1 | strip}}
+default-timeout=0
+
+[mode=dnd]
+invisible=1
