@@ -34,6 +34,10 @@ Singleton {
     readonly property int launcherHeight: panelPadding * 2 + rowHeight * (maxRows + 1) + spacing
     readonly property int launcherMs: 260
     readonly property real launcherOpacity: 0.85
+    readonly property bool launcherGrid: true
+    readonly property int launcherGridCols: 6
+    readonly property int launcherGridRows: 6
+    readonly property int launcherCellSize: 110
 
     readonly property int animationMs: 150
 }
