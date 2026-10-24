@@ -1,3 +1,5 @@
+// shell.qml - обновленный файл без старого лаунчера
+
 //@ pragma UseQApplication
 import Quickshell
 import Quickshell.Io
@@ -9,12 +11,8 @@ ShellRoot {
         model: Quickshell.screens
         Bar {}
     }
-
-    LazyLoader {
-        active: Launcher.open
-        AppLauncher {}
-    }
-
+    
+    // IPC для лаунчера (уже в Launcher.qml)
     IpcHandler {
         target: "launcher"
         function toggle(): void { Launcher.toggle() }

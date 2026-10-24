@@ -3,9 +3,10 @@
 {%- set radius = 9 -%}
 {%- set border = 2 -%}
 {%- set gap = 7 -%}
+{%- set ring = 2 -%}
 {%- set padding = 12 -%}
 {%- set bg_alpha = "d9" -%}
-# Токены (Theme.qml): шрифт {{font}}, радиус {{radius}}, рамка {{border}}, отступ {{gap}}
+# Токены (Theme.qml): шрифт {{font}}, радиус {{radius}}, рамка {{border}}, отступ {{gap}}, кольцо {{ring}}
 font={{font}}
 background-color=#{{background | strip}}{{bg_alpha}}
 text-color=#{{foreground | strip}}
@@ -13,7 +14,7 @@ border-color=#{{color4 | strip}}
 border-size={{border}}
 border-radius={{radius}}
 padding={{padding}}
-margin={{gap}}
+margin={{gap - ring}},{{gap}},{{gap}},{{gap}}
 outer-margin=0
 layer=overlay
 anchor=top-right

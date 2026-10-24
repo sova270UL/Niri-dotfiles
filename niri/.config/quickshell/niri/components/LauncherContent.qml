@@ -3,9 +3,8 @@ import QtQuick
 import qs.theme
 import qs.services
 
-OverlayPanel {
+Item {
     id: root
-    onDismissed: Launcher.close()
 
     readonly property var results: Launcher.search(input.text)
 
@@ -13,6 +12,8 @@ OverlayPanel {
         const entry = results[list.currentIndex]
         if (entry) Launcher.launch(entry)
     }
+
+    Component.onCompleted: input.forceActiveFocus()
 
     Column {
         width: parent.width
@@ -47,7 +48,6 @@ OverlayPanel {
                 focus: true
 
                 onTextChanged: list.currentIndex = 0
-                Component.onCompleted: forceActiveFocus()
 
                 Keys.onPressed: event => {
                     const ctrl = event.modifiers & Qt.ControlModifier

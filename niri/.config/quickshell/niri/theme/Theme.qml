@@ -31,5 +31,9 @@ Singleton {
     readonly property int maxRows: 8
     readonly property real selectionOpacity: 0.3
 
+    readonly property int launcherHeight: panelPadding * 2 + rowHeight * (maxRows + 1) + spacing
+    readonly property int launcherMs: 260
+    readonly property real launcherOpacity: 0.85
+
     readonly property int animationMs: 150
 }
