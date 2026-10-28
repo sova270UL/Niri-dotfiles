@@ -5,17 +5,17 @@ import qs.services
 Row {
     id: root
     required property string output
-    spacing: 6
+    spacing: Theme.workspaceSpacing
 
     Repeater {
         model: NiriState.workspacesFor(root.output)
 
         Rectangle {
             required property var modelData
-            width: modelData.is_active ? 15 : 10
-            height: 8
-            radius: 5
-            color: modelData.is_active ? Colors.accent : Qt.alpha(Colors.foreground, 0.4)
+            width: modelData.is_active ? Theme.workspaceActiveWidth : Theme.workspaceDotWidth
+            height: Theme.workspaceDotHeight
+            radius: height / 2
+            color: modelData.is_active ? Colors.accent : Qt.alpha(Colors.foreground, Theme.workspaceInactiveOpacity)
         }
     }
 }

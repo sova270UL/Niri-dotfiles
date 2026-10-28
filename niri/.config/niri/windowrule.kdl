@@ -14,7 +14,10 @@ window-rule {
 window-rule {
     match app-id="firefox"
     opacity 1.0
-
+    // Размытие под прозрачной оболочкой Firefox (userChrome.css)
+    background-effect {
+        blur true
+    }
 }
 window-rule {
     // This regular expression is intentionally made as specific as possible,

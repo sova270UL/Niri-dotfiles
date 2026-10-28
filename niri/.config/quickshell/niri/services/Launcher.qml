@@ -2,10 +2,10 @@ pragma Singleton
 import Quickshell
 
 Singleton {
-    property bool open: false
+    readonly property bool open: Panels.current === "launcher"
 
-    function toggle() { open = !open }
-    function close() { open = false }
+    function toggle() { Panels.toggle("launcher") }
+    function close() { Panels.close() }
 
     function search(query) {
         const apps = DesktopEntries.applications.values.filter(e => !e.noDisplay)

@@ -8,3 +8,12 @@ quickshell = { template = "colors.json", target = "~/dotfiles/niri/.config/quick
 mako = { template = "mako.tmpl", target = "~/dotfiles/niri/.config/mako/config" }
 fuzzel = { template = "fuzzel.tmpl", target = "~/dotfiles/niri/.config/fuzzel/fuzzel.ini" }
 niri = { template = "niri-colors.kdl", target = "~/dotfiles/niri/.config/niri/niri-colors.kdl" }
+pywalfox = { template = "pywal-colors.json", target = "~/.cache/wal/colors.json" }
+walogram = { template = "walogram-colors.sh", target = "~/.cache/wal/colors.sh" }
+walogram-wallpaper = { template = "walogram-wallpaper", target = "~/.cache/wal/wal" }
+
+# Хуки выполняет /bin/sh после генерации. Проверка command -v, чтобы смена обоев
+# не ломалась, пока pywalfox/walogram не установлены.
+[hooks]
+pywalfox = "command -v pywalfox >/dev/null && pywalfox update || true"
+walogram = "command -v walogram >/dev/null && walogram || true"

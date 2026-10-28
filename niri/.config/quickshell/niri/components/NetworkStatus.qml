@@ -1,11 +1,10 @@
 import QtQuick
-import Quickshell
 import qs.theme
 import qs.services
 
 Capsule {
     clickable: true
-    onClicked: Quickshell.execDetached(["kitty", "--class", "nmtui", "nmtui"])
+    onClicked: Panels.toggle("wifi")
 
     BarText {
         text: Net.icon

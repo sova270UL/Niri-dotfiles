@@ -1,5 +1,3 @@
-// shell.qml - обновленный файл без старого лаунчера
-
 //@ pragma UseQApplication
 import Quickshell
 import Quickshell.Io
@@ -11,10 +9,29 @@ ShellRoot {
         model: Quickshell.screens
         Bar {}
     }
-    
-    // IPC для лаунчера (уже в Launcher.qml)
+
+    Variants {
+        model: Quickshell.screens
+        VolumeOsd {}
+    }
+
     IpcHandler {
         target: "launcher"
         function toggle(): void { Launcher.toggle() }
+    }
+
+    IpcHandler {
+        target: "power"
+        function toggle(): void { Panels.toggle("power") }
+    }
+
+    IpcHandler {
+        target: "wifi"
+        function toggle(): void { Panels.toggle("wifi") }
+    }
+
+    IpcHandler {
+        target: "volume"
+        function show(): void { Osd.show(true) }
     }
 }

@@ -1,5 +1,5 @@
 {#- Токены: держать равными значениям из quickshell/niri/theme/Theme.qml -#}
-{%- set font = "Noto Sans Mono 14" -%}
+{%- set font = "Noto Sans Mono 11" -%}
 {%- set radius = 9 -%}
 {%- set border = 2 -%}
 {%- set gap = 7 -%}
@@ -19,6 +19,8 @@ outer-margin=0
 layer=overlay
 anchor=top-right
 max-visible=5
+width=360
+height=90
 default-timeout=5000
 
 icons=1
@@ -27,10 +29,10 @@ icon-location=left
 icon-border-radius={{radius}}
 
 group-by=app-name
-format=<b>%s</b>\n%b
+format=<b>%s</b>\n<span size="small">%b</span>
 
 [grouped=true]
-format=<b>%s</b> (%g)\n%b
+format=<b>%s</b> (%g)\n<span size="small">%b</span>
 
 [urgency=low]
 border-color=#{{color8 | strip}}

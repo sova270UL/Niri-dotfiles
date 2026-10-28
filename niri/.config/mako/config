@@ -1,8 +1,8 @@
-# Токены (Theme.qml): шрифт Noto Sans Mono 14, радиус 9, рамка 2, отступ 7, кольцо 2
-font=Noto Sans Mono 14
-background-color=#1F1F21d9
-text-color=#F9F9FA
-border-color=#A07ABF
+# Токены (Theme.qml): шрифт Noto Sans Mono 11, радиус 9, рамка 2, отступ 7, кольцо 2
+font=Noto Sans Mono 11
+background-color=#101111d9
+text-color=#FEF8EF
+border-color=#91798E
 border-size=2
 border-radius=9
 padding=12
@@ -11,6 +11,8 @@ outer-margin=0
 layer=overlay
 anchor=top-right
 max-visible=5
+width=360
+height=90
 default-timeout=5000
 
 icons=1
@@ -19,17 +21,17 @@ icon-location=left
 icon-border-radius=9
 
 group-by=app-name
-format=<b>%s</b>\n%b
+format=<b>%s</b>\n<span size="small">%b</span>
 
 [grouped=true]
-format=<b>%s</b> (%g)\n%b
+format=<b>%s</b> (%g)\n<span size="small">%b</span>
 
 [urgency=low]
-border-color=#A7A7A8
+border-color=#ACA59D
 default-timeout=3000
 
 [urgency=high]
-border-color=#4F4F56
+border-color=#736878
 default-timeout=0
 
 [mode=dnd]
