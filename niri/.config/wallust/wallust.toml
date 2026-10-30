@@ -6,7 +6,6 @@ check_contrast = true
 [templates]
 quickshell = { template = "colors.json", target = "~/dotfiles/niri/.config/quickshell/niri/theme/colors.json" }
 mako = { template = "mako.tmpl", target = "~/dotfiles/niri/.config/mako/config" }
-fuzzel = { template = "fuzzel.tmpl", target = "~/dotfiles/niri/.config/fuzzel/fuzzel.ini" }
 niri = { template = "niri-colors.kdl", target = "~/dotfiles/niri/.config/niri/niri-colors.kdl" }
 pywalfox = { template = "pywal-colors.json", target = "~/.cache/wal/colors.json" }
 walogram = { template = "walogram-colors.sh", target = "~/.cache/wal/colors.sh" }

@@ -20,3 +20,6 @@ animations {
     // slowdown 3.0
 }
 
+environment {
+    QT_QPA_PLATFORMTHEME "qt6ct"
+}

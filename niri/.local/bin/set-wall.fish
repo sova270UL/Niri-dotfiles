@@ -33,13 +33,13 @@ if not awww img $wall --transition-type $transition_type --transition-fps $trans
     exit 1
 end
 
-# Пересборка палитры: wallust пишет файлы для Quickshell, mako, fuzzel и niri
+# Пересборка палитры: wallust пишет файлы для Quickshell, mako и niri
 if not wallust run $wall
     echo "set-wall: wallust завершился с ошибкой" >&2
     exit 1
 end
 
-# mako читает конфиг только при перезагрузке, fuzzel читает его при каждом запуске
+# mako читает конфиг только при перезагрузке
 makoctl reload
 
 # Запоминаем выбор

@@ -64,6 +64,31 @@ Singleton {
     readonly property int osdArmMs: 1500
     readonly property int fullscreenTolerance: 2
 
+    readonly property int mediaCoverSize: 72
+    readonly property int mediaTrackHeight: 6
+    readonly property int mediaProgressHeight: 18
+    readonly property int mediaTimeWidth: 36
+    readonly property int mediaTimeFontSize: 12
+    readonly property int mediaButtonWidth: 48
+    readonly property int mediaPanelWidth: 300
+    readonly property int mediaPanelHeight: spacing * 2 + mediaCoverSize + spacing + mediaProgressHeight + spacing + rowHeight
+    readonly property int mediaBarMaxWidth: 180
+    readonly property int mediaTickMs: 1000
+    readonly property string visualizerPreset: "bottom"
+    readonly property bool visualizerRequirePlayback: true
+    readonly property int visualizerHeight: 240
+    readonly property int visualizerGap: 4
+    readonly property int visualizerMinBar: 4
+    readonly property real visualizerMinOpacity: 0.3
+    readonly property int visualizerMaxRange: 1000
+    readonly property int visualizerFadeMs: 500
+    readonly property int visualizerSmoothMs: 60
+
+    readonly property int calendarCell: 36
+    readonly property int calendarWeekdayHeight: 22
+    readonly property int calendarWidth: calendarCell * 7 + spacing * 2
+    readonly property int calendarHeight: spacing * 4 + rowHeight + calendarWeekdayHeight + calendarCell * 6
+
     readonly property int launcherHeight: panelPadding * 2 + rowHeight + spacing + gridCellHeight * gridRows
     readonly property int launcherMs: 260
     readonly property real launcherOpacity: 0.85

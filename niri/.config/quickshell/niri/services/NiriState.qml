@@ -30,6 +30,17 @@ Singleton {
             && size[1] >= screen.height - Theme.fullscreenTolerance
     }
 
+    function hasWindows(workspaceId) {
+        return Object.values(windows).some(w => w.workspace_id === workspaceId)
+    }
+
+    function emptyWorkspace(output) {
+        const ws = workspaces.find(w => w.output === output && w.is_active)
+        return ws !== undefined && !hasWindows(ws.id)
+    }
+
+    readonly property bool anyEmptyWorkspace: workspaces.some(w => w.is_active && !hasWindows(w.id))
+
     function workspacesFor(output) {
         return workspaces
             .filter(w => w.output === output)

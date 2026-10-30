@@ -21,15 +21,19 @@ PanelWindow {
         && onFocusedOutput
     readonly property bool interactive: panelHere || (expanded && shownKind !== "volume")
 
-    readonly property bool flushRight: shownKind !== "launcher"
+    readonly property bool flushRight: shownKind === "power" || shownKind === "wifi" || shownKind === "volume"
     readonly property real cardWidth: shownKind === "power" ? powerButton.width + Theme.spacing
         : shownKind === "wifi" ? Theme.wifiPanelWidth
-        : shownKind === "volume" ? Theme.osdWidth : Theme.panelWidth
+        : shownKind === "volume" ? Theme.osdWidth
+        : shownKind === "media" ? Theme.mediaPanelWidth
+        : shownKind === "calendar" ? Theme.calendarWidth : Theme.panelWidth
     readonly property real cardHeight: shownKind === "power" ? Theme.powerMenuHeight
         : shownKind === "wifi" ? Theme.wifiPanelHeight
-        : shownKind === "volume" ? Theme.osdHeight : Theme.launcherHeight
+        : shownKind === "volume" ? Theme.osdHeight
+        : shownKind === "media" ? Theme.mediaPanelHeight
+        : shownKind === "calendar" ? Theme.calendarHeight : Theme.launcherHeight
     readonly property real cardX: flushRight ? width - cardWidth : (width - cardWidth) / 2
-    readonly property real contentPadding: flushRight ? Theme.spacing : Theme.panelPadding
+    readonly property real contentPadding: shownKind === "launcher" ? Theme.panelPadding : Theme.spacing
 
     property real progress: (panelHere || osdHere) ? 1 : 0
     readonly property bool expanded: progress > 0
@@ -136,10 +140,17 @@ PanelWindow {
         }
 
         Row {
+            id: clockRow
             spacing: Theme.spacing
             anchors.centerIn: parent
 
             Clock {}
+        }
+
+        MediaButton {
+            anchors.right: clockRow.left
+            anchors.rightMargin: Theme.spacing
+            anchors.verticalCenter: parent.verticalCenter
         }
 
         Row {
@@ -159,6 +170,8 @@ PanelWindow {
     Component { id: powerComponent; PowerMenuContent {} }
     Component { id: wifiComponent; WifiMenuContent {} }
     Component { id: volumeComponent; VolumeOsdContent {} }
+    Component { id: mediaComponent; MediaContent {} }
+    Component { id: calendarComponent; CalendarContent {} }
 
     Loader {
         active: root.panelHere || root.osdHere || root.expanded
@@ -169,6 +182,8 @@ PanelWindow {
         opacity: Math.max(0, (root.progress - 0.5) * 2)
         sourceComponent: root.shownKind === "power" ? powerComponent
             : root.shownKind === "wifi" ? wifiComponent
-            : root.shownKind === "volume" ? volumeComponent : launcherComponent
+            : root.shownKind === "volume" ? volumeComponent
+            : root.shownKind === "media" ? mediaComponent
+            : root.shownKind === "calendar" ? calendarComponent : launcherComponent
     }
 }

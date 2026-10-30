@@ -7,6 +7,29 @@ Singleton {
     function toggle() { Panels.toggle("launcher") }
     function close() { Panels.close() }
 
+    readonly property string genericIcon: Quickshell.iconPath("application-x-executable", true)
+
+    readonly property var iconOverrides: ({
+        "hwloc": "/home/sova/.local/share/shelly-icons/src/64x64/hwloc.png",
+        "wine": "/home/sova/.local/share/shelly-icons/src/128x128/wine.png",
+        "docker": "/home/sova/.local/share/shelly-icons/src/128x128/docker.png"
+    })
+
+    function iconFor(entry) {
+        const name = (entry.icon || "").trim()
+        const candidates = [name]
+        if (name !== "" && name.charAt(0) !== "/") {
+            candidates.push("/usr/share/pixmaps/" + name + ".png")
+            candidates.push(iconOverrides[name] || "")
+        }
+        for (const candidate of candidates) {
+            if (candidate === "") continue
+            const path = Quickshell.iconPath(candidate, true)
+            if (path !== "") return path
+        }
+        return genericIcon
+    }
+
     function search(query) {
         const apps = DesktopEntries.applications.values.filter(e => !e.noDisplay)
         const q = query.trim().toLowerCase()

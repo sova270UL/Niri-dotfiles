@@ -117,7 +117,7 @@ Item {
                     sourceSize.width: Theme.gridIconSize
                     sourceSize.height: Theme.gridIconSize
                     asynchronous: true
-                    source: Quickshell.iconPath(cell.modelData.icon, "application-x-executable")
+                    source: Launcher.iconFor(cell.modelData)
                 }
 
                 BarText {
