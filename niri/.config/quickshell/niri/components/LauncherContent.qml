@@ -35,7 +35,7 @@ Item {
                 anchors.leftMargin: Theme.capsulePadding
                 verticalAlignment: Text.AlignVCenter
                 text: "Поиск приложения"
-                opacity: 0.5
+                opacity: Theme.dimOpacity
                 visible: input.text === ""
             }
 
@@ -144,7 +144,7 @@ Item {
             BarText {
                 anchors.centerIn: parent
                 text: "Ничего не найдено"
-                opacity: 0.5
+                opacity: Theme.dimOpacity
                 visible: grid.count === 0
             }
         }

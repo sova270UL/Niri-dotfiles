@@ -85,7 +85,7 @@ Item {
                     anchors.centerIn: parent
                     text: "\uF001"
                     font.pixelSize: Theme.powerIconSize * 2
-                    opacity: 0.5
+                    opacity: Theme.dimOpacity
                     visible: art.status !== Image.Ready
                 }
 
@@ -115,14 +115,14 @@ Item {
                 BarText {
                     width: parent.width
                     elide: Text.ElideRight
-                    opacity: 0.7
+                    opacity: Theme.softOpacity
                     text: root.player ? root.player.trackArtist : ""
                 }
 
                 BarText {
                     width: parent.width
                     elide: Text.ElideRight
-                    opacity: 0.5
+                    opacity: Theme.dimOpacity
                     font.pixelSize: Theme.mediaTimeFontSize
                     text: root.player ? root.player.identity : ""
                 }
@@ -137,7 +137,7 @@ Item {
             BarText {
                 anchors.verticalCenter: parent.verticalCenter
                 width: Theme.mediaTimeWidth
-                opacity: 0.7
+                opacity: Theme.softOpacity
                 font.pixelSize: Theme.mediaTimeFontSize
                 text: root.format(root.position)
             }
@@ -172,7 +172,7 @@ Item {
                 anchors.verticalCenter: parent.verticalCenter
                 width: Theme.mediaTimeWidth
                 horizontalAlignment: Text.AlignRight
-                opacity: 0.7
+                opacity: Theme.softOpacity
                 font.pixelSize: Theme.mediaTimeFontSize
                 text: root.format(root.length)
             }
@@ -197,7 +197,7 @@ Item {
                         height: Theme.rowHeight
                         radius: Theme.radius
                         color: Qt.alpha(Colors.accent, mouse.containsMouse && root.available(modelData) ? Theme.selectionOpacity : 0)
-                        opacity: root.available(modelData) ? 1 : 0.3
+                        opacity: root.available(modelData) ? 1 : Theme.faintOpacity
 
                         Behavior on color { ColorAnimation { duration: Theme.animationMs } }
 

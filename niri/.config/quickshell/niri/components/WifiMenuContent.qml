@@ -146,7 +146,7 @@ Item {
             height: Theme.rowHeight
             radius: Theme.radius
             color: ListView.isCurrentItem ? Qt.alpha(Colors.accent, Theme.selectionOpacity) : "transparent"
-            opacity: network && network.stateChanging ? 0.5 : 1
+            opacity: network && network.stateChanging ? Theme.dimOpacity : 1
 
             Behavior on color { ColorAnimation { duration: Theme.animationMs } }
 

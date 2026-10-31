@@ -29,11 +29,13 @@ Singleton {
 
     readonly property int panelWidth: 520
     readonly property int panelPadding: 10
-    readonly property real panelTopRatio: 0.2
-    readonly property real panelOpacity: 0.85
 
     readonly property int rowHeight: 34
     readonly property real selectionOpacity: 0.3
+    readonly property real dimOpacity: 0.5
+    readonly property real softOpacity: 0.7
+    readonly property real faintOpacity: 0.3
+    readonly property real inactiveOpacity: 0.4
 
     readonly property int gridColumns: 5
     readonly property int gridRows: 4

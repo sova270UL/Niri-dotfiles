@@ -1,5 +1,6 @@
 import QtQuick
 import Quickshell
+import qs.theme
 import qs.services
 
 Capsule {
@@ -9,6 +10,6 @@ Capsule {
 
     BarText {
         text: Audio.icon + " " + Audio.percent + "%"
-        opacity: Audio.muted ? 0.5 : 1
+        opacity: Audio.muted ? Theme.dimOpacity : 1
     }
 }

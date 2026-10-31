@@ -86,7 +86,7 @@ binds {
     Mod+BracketRight { consume-or-expel-window-right; }
 
 
-    // Смена присета колонок
+    // Смена пресета колонок
     Mod+R hotkey-overlay-title="Смена пресета ширины"{ switch-preset-column-width; }
     // Пресеты по высоте
     Mod+Ctrl+Shift+R hotkey-overlay-title="Смена пресета высоты"{ switch-preset-window-height; }

@@ -2,8 +2,6 @@ pragma Singleton
 import Quickshell
 
 Singleton {
-    readonly property bool open: Panels.current === "launcher"
-
     function toggle() { Panels.toggle("launcher") }
     function close() { Panels.close() }
 

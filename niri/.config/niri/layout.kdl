@@ -1,11 +1,11 @@
-// Отключает укарашения со стороны клиента
+// Отключает украшения со стороны клиента
 prefer-no-csd
 
 layout {
     // отступы
     gaps 7
 
-    // Цетрирование окна, варианты "never" "always" "on-overflow"
+    // Центрирование окна, варианты "never" "always" "on-overflow"
     center-focused-column "on-overflow"
 
     // Пресеты масштаба окон

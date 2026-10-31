@@ -26,7 +26,7 @@ Item {
                 height: parent.height
                 radius: height / 2
                 color: Colors.accent
-                opacity: Audio.muted ? 0.4 : 1
+                opacity: Audio.muted ? Theme.inactiveOpacity : 1
 
                 Behavior on width {
                     NumberAnimation { duration: Theme.animationMs; easing.type: Easing.OutCubic }
@@ -40,7 +40,7 @@ Item {
             width: Theme.osdPercentWidth
             horizontalAlignment: Text.AlignRight
             text: Audio.percent + "%"
-            opacity: Audio.muted ? 0.5 : 1
+            opacity: Audio.muted ? Theme.dimOpacity : 1
         }
     }
 }

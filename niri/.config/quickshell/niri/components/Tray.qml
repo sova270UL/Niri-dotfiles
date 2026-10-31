@@ -3,8 +3,6 @@ import Quickshell
 import Quickshell.Services.SystemTray
 import qs.theme
 
-
-
 Capsule {
     visible: repeater.count > 0
 
@@ -22,6 +20,7 @@ Capsule {
                 width: Theme.iconSize
                 height: Theme.iconSize
                 sourceSize: Qt.size(Theme.iconSize, Theme.iconSize)
+                asynchronous: true
                 source: modelData.icon
 
                 QsMenuAnchor {
@@ -30,7 +29,7 @@ Capsule {
                     anchor.item: icon
                     anchor.edges: Edges.Bottom | Edges.Left
                     anchor.gravity: Edges.Bottom | Edges.Right
-                    anchor.rect.height: icon.height + 6
+                    anchor.rect.height: icon.height + Theme.innerSpacing
                 }
 
                 MouseArea {

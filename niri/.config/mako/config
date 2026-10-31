@@ -1,8 +1,8 @@
 # Токены (Theme.qml): шрифт Noto Sans Mono 11, радиус 9, рамка 2, отступ 7, кольцо 2
 font=Noto Sans Mono 11
-background-color=#101111d9
-text-color=#FEF8EF
-border-color=#91798E
+background-color=#120F12d9
+text-color=#ECE6F5
+border-color=#8061A4
 border-size=2
 border-radius=9
 padding=12
@@ -27,11 +27,11 @@ format=<b>%s</b>\n<span size="small">%b</span>
 format=<b>%s</b> (%g)\n<span size="small">%b</span>
 
 [urgency=low]
-border-color=#ACA59D
+border-color=#9A93A2
 default-timeout=3000
 
 [urgency=high]
-border-color=#736878
+border-color=#4B414B
 default-timeout=0
 
 [mode=dnd]

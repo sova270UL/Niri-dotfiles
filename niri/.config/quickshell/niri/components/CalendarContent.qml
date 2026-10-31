@@ -149,7 +149,7 @@ Item {
                     height: Theme.calendarWeekdayHeight
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
-                    opacity: 0.5
+                    opacity: Theme.dimOpacity
                     font.pixelSize: Theme.gridFontSize
                     text: Qt.locale().dayName((root.firstDay + index) % 7, Locale.ShortFormat)
                 }
@@ -178,7 +178,7 @@ Item {
                         anchors.centerIn: parent
                         text: cell.day.getDate()
                         color: cell.today ? Colors.background : Colors.foreground
-                        opacity: cell.inMonth ? 1 : 0.3
+                        opacity: cell.inMonth ? 1 : Theme.faintOpacity
                         font.bold: cell.today
                     }
                 }
