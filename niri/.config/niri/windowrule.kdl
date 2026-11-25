@@ -31,9 +31,9 @@ window-rule {
 
 // Kitty
 window-rule {
-	match app-id="^kitty$"
+    match app-id="^kitty$"
+    match app-id="^yazi$"
 
-	opacity 1.0
     background-effect {
         blur true
     }
@@ -49,4 +49,32 @@ window-rule {
 window-rule {
     match app-id="^nmtui$"
     open-floating true
+}
+
+// Satty: правка скриншотов (бинт Mod+Print)
+window-rule {
+    match app-id="org.satty.satty"
+    open-floating true
+}
+
+//iiko
+window-rule {
+	match app-id="backoffice.exe"
+	match app-id="aspia_client.exe"
+	default-column-width { proportion 1.0; }
+}
+
+// Mango Talker / BackOffice: виртуальный рабочий стол Wine.
+// Окно "… — Рабочий стол Wine" тайлится, как обычное (размер задаёт CLEAR.py:
+// по умолчанию 1868x1037 — как тайловая область экрана 1920x1080).
+// Матчим только app-id: у Wine заголовок появляется после открытия окна.
+window-rule {
+    match app-id=r#"^explorer\.exe$"#
+    open-floating false
+    // Wine-десктоп фиксированного размера (1868x1037): колонка — во всю ширину,
+    // иначе niri отдаёт новому окну половину и содержимое обрезается.
+    default-column-width { proportion 1.0; }
+    // Wine в desktop-режиме просит fullscreen, если размер десктопа совпал
+    // с экраном; страховка, чтобы окно не разворачивалось.
+    open-fullscreen false
 }

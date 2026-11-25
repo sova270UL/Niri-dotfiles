@@ -1,7 +1,7 @@
-//@ pragma UseQApplication
 //@ pragma IconTheme Adwaita
 import Quickshell
 import Quickshell.Io
+import QtQuick
 import qs.components
 import qs.services
 
@@ -24,6 +24,7 @@ ShellRoot {
     IpcHandler {
         target: "launcher"
         function toggle(): void { Launcher.toggle() }
+        function reindex(): void { Launcher.writeIndex() }
     }
 
     IpcHandler {
@@ -49,6 +50,11 @@ ShellRoot {
     IpcHandler {
         target: "calendar"
         function toggle(): void { Panels.toggle("calendar") }
+    }
+
+    IpcHandler {
+        target: "wallpaper"
+        function toggle(): void { Panels.toggle("wallpaper") }
     }
 
     IpcHandler {

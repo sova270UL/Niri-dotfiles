@@ -33,7 +33,8 @@ PanelWindow {
         : shownKind === "media" ? Theme.mediaPanelHeight
         : shownKind === "calendar" ? Theme.calendarHeight : Theme.launcherHeight
     readonly property real cardX: flushRight ? width - cardWidth : (width - cardWidth) / 2
-    readonly property real contentPadding: shownKind === "launcher" ? Theme.panelPadding : Theme.spacing
+    readonly property real contentPadding: (shownKind === "launcher" || shownKind === "wallpaper")
+        ? Theme.panelPadding : Theme.spacing
 
     property real progress: (panelHere || osdHere) ? 1 : 0
     readonly property bool expanded: progress > 0
@@ -171,7 +172,7 @@ PanelWindow {
     Component { id: wifiComponent; WifiMenuContent {} }
     Component { id: volumeComponent; VolumeOsdContent {} }
     Component { id: mediaComponent; MediaContent {} }
-    Component { id: calendarComponent; CalendarContent {} }
+    Component { id: wallpaperComponent; WallpaperContent {} }
 
     Loader {
         active: root.panelHere || root.osdHere || root.expanded
@@ -184,6 +185,7 @@ PanelWindow {
             : root.shownKind === "wifi" ? wifiComponent
             : root.shownKind === "volume" ? volumeComponent
             : root.shownKind === "media" ? mediaComponent
-            : root.shownKind === "calendar" ? calendarComponent : launcherComponent
+            : root.shownKind === "calendar" ? calendarComponent
+            : root.shownKind === "wallpaper" ? wallpaperComponent : launcherComponent
     }
 }

@@ -1,0 +1,32 @@
+{#- Токены: держать равными значениям из quickshell/niri/theme/Theme.qml -#}
+{%- set font = "Noto Sans Mono" -%}
+{%- set corner = 9 -%}
+# Сгенерировано wallust из satty.tmpl — правки затрутся при смене обоев.
+# Токены (Theme.qml): шрифт {{font}}, скругление аннотаций {{corner}}
+[general]
+title = "Satty"
+app-id = "org.satty.satty"
+output-filename = "~/Pictures/Screenshots/edited-%Y-%m-%d_%H-%M-%S.png"
+copy-command = "wl-copy"
+early-exit = ["copy"]
+actions-on-enter = ["save-to-clipboard"]
+actions-on-escape = ["exit"]
+corner-roundness = {{corner}}
+initial-tool = "brush"
+no-window-decoration = true
+
+[font]
+family = "{{font}}"
+style = "Regular"
+
+[color-palette]
+palette = [
+    "#{{color1 | strip}}ff",
+    "#{{color2 | strip}}ff",
+    "#{{color3 | strip}}ff",
+    "#{{color4 | strip}}ff",
+    "#{{color5 | strip}}ff",
+    "#{{color6 | strip}}ff",
+    "#{{color8 | strip}}ff",
+    "#{{foreground | strip}}ff",
+]

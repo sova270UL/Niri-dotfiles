@@ -4,12 +4,11 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+T hotkey-overlay-title="Kitty" { spawn "/home/sova/.local/bin/run-or-raise.fish" "kitty" "kitty"; }
     Mod+Space hotkey-overlay-title="Run an Application: launcher" { spawn "qs" "-c" "niri" "ipc" "call" "launcher" "toggle"; }
-    Mod+X hotkey-overlay-title="Run an Application: Tg" {spawn "freshGram";}
-    Mod+B hotkey-overlay-title="Run an Application: Firefox" {spawn "firefox";}
-    Mod+E hotkey-overlay-title="Run an Application: Yazi" {spawn "kitty" "yazi";}
-    
+    Mod+X hotkey-overlay-title="Telegram" { spawn "/home/sova/.local/bin/run-or-raise.fish" "io.github.snowyfluffy.freshgram" "freshGram"; }
+	Mod+B hotkey-overlay-title="Firefox" { spawn "/home/sova/.local/bin/run-or-raise.fish" "firefox" "firefox"; }
+    Mod+E hotkey-overlay-title="Yazi" { spawn "/home/sova/.local/bin/run-or-raise.fish" "yazi" "kitty" "--class" "yazi" "-e" "yazi"; }    
 
 
     //Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
@@ -127,9 +126,12 @@ binds {
     Mod+W { toggle-column-tabbed-display; }
 
     // Скриншоты
-    Print { screenshot; }
+    // Print: интерфейс снимка niri, после снимка автоматически открывается satty
+    Print { spawn-sh "$HOME/.local/bin/screenshot-satty.fish"; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
+    // Правка картинки, которая уже лежит в буфере обмена
+    Mod+Print { spawn-sh "wl-paste --type image/png | satty --filename -"; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 

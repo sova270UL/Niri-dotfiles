@@ -1,0 +1,45 @@
+{
+  "_help": "Вкладки лаунчера. Наполнение = объединение приложений из categories (по tabs.generated.json) + add - remove. Правьте руками, порядок вкладок — как в этом файле.",
+  "tabs": [
+    { "id": "all", "title": "Все", "categories": [] },
+
+    {
+      "id": "game",
+      "title": "Игры",
+      "categories": ["Game", "ActionGame", "AdventureGame", "ArcadeGame", "BoardGame", "BlocksGame", "CardGame", "KidsGame", "LogicGame", "RolePlaying", "Shooter", "Simulation", "SportsGame", "StrategyGame", "Emulator"],
+      "remove": ["com.usebottles.bottles", "mango-talker"]
+    },
+    {
+      "id": "net",
+      "title": "Интернет",
+      "categories": ["Network", "WebBrowser", "Email", "InstantMessaging", "IRCClient", "Chat", "VideoConference", "Feed", "FileTransfer", "P2P", "RemoteAccess", "News", "Maps", "Telephony"],
+      "remove": ["warthunder-launcher", "steam", "mango-talker", "clear.py-0.2-x86_64"]
+    },
+    {
+      "id": "dev",
+      "title": "Разработка",
+      "categories": ["Development", "IDE", "Debugger", "Profiling", "Building", "RevisionControl", "TextEditor", "WebDevelopment", "GUIDesigner"]
+    },
+    {
+      "id": "media",
+      "title": "Медиа",
+      "categories": ["AudioVideo", "Audio", "Video", "Player", "Music", "Recorder", "AudioVideoEditing", "AudioEditing", "Mixer", "Sequencer", "Midi", "TV", "Tuner"]
+    },
+    {
+      "id": "office",
+      "title": "Офис",
+      "categories": ["Office", "WordProcessor", "Spreadsheet", "Presentation", "Calendar", "ContactManagement", "Database", "Education", "Science", "Math", "ProjectManagement", "Finance"]
+    },
+    {
+      "id": "system",
+      "title": "Система",
+      "categories": ["System", "Settings", "DesktopSettings", "HardwareSettings", "PackageManager", "Security", "FileTools", "FileManager", "TerminalEmulator", "Monitor", "Core"]
+    },
+    {
+      "id": "util",
+      "title": "Утилиты",
+      "categories": ["Utility", "Calculator", "Clock", "Archiving", "Compression", "Accessibility", "Filesystem", "Print"]
+    }
+
+  ]
+}

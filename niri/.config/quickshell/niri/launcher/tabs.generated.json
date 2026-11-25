@@ -1,0 +1,373 @@
+{
+  "version": 1,
+  "count": 99,
+  "categories": {
+    "Game": [
+      "net.lutris.warcraft-3-1",
+      "com.usebottles.bottles",
+      "com.heroicgameslauncher.hgl",
+      "Satisfactory",
+      "com.usebottles.bottles.App_c2518e9300b99ad36c3b167afbefc2539882a651",
+      "io.github.Faugus.faugus-launcher",
+      "io.github.benjamimgois.goverlay",
+      "net.lutris.crime-scene-cleaner-2",
+      "net.lutris.world-of-warcraft-3",
+      "steam",
+      "Dishonored 2",
+      "Risk of Rain 2",
+      "Skul The Hero Slayer",
+      "millida-launcher",
+      "net.lutris.Lutris",
+      "net.lutris.battlenet-4",
+      "Pathfinder Wrath of the Righteous - Enhanced Edition",
+      "Heroes of Might & Magic III - HD Edition"
+    ],
+    "Utility": [
+      "com.usebottles.bottles",
+      "micro",
+      "postman",
+      "clear.py-0.5-x86_64",
+      "uuctl",
+      "winetricks",
+      "WIN_RDP",
+      "xgps",
+      "ipython",
+      "limine-snapper-restore",
+      "localsend",
+      "xgpsspeed",
+      "io.github.seadve.Kooha",
+      "dev.zed.Zed",
+      "protontricks",
+      "com.shellyorg.shelly",
+      "org.gnome.Nautilus",
+      "org.bleachbit.BleachBit",
+      "waypaper",
+      "galculator"
+    ],
+    "Graphics": [
+      "com.usebottles.bottles",
+      "com.system76.CosmicViewer",
+      "libreoffice-draw"
+    ],
+    "3DGraphics": [
+      "com.usebottles.bottles"
+    ],
+    "Emulator": [
+      "com.usebottles.bottles"
+    ],
+    "GNOME": [
+      "com.usebottles.bottles",
+      "nm-connection-editor",
+      "org.remmina.Remmina",
+      "cachyos-hello",
+      "bssh",
+      "warthunder-launcher",
+      "avahi-discover",
+      "io.github.seadve.Kooha",
+      "bvnc",
+      "org.gnome.Nautilus"
+    ],
+    "GTK": [
+      "com.usebottles.bottles",
+      "nm-connection-editor",
+      "org.remmina.Remmina",
+      "cachyos-hello",
+      "org.pulseaudio.pavucontrol",
+      "warthunder-launcher",
+      "io.github.seadve.Kooha",
+      "rudesktop",
+      "org.gnome.Nautilus",
+      "waypaper"
+    ],
+    "TextEditor": [
+      "micro",
+      "dev.zed.Zed",
+      "code-oss"
+    ],
+    "Development": [
+      "micro",
+      "postman",
+      "qdbusviewer",
+      "cmake-gui",
+      "ipython",
+      "assistant",
+      "designer",
+      "dev.zed.Zed",
+      "linguist",
+      "letos",
+      "code-oss"
+    ],
+    "Settings": [
+      "nm-connection-editor",
+      "qt6ct",
+      "org.pulseaudio.pavucontrol",
+      "uuctl",
+      "nvidia-settings",
+      "gay.pancake.lsfg-vk-ui",
+      "io.github.eugeniosegala.mako.uninstaller",
+      "io.github.eugeniosegala.mako"
+    ],
+    "X-GNOME-NetworkSettings": [
+      "nm-connection-editor",
+      "org.remmina.Remmina"
+    ],
+    "X-GNOME-Utilities": [
+      "nm-connection-editor"
+    ],
+    "Application": [
+      "jshell-java-openjdk",
+      "gtk-lshw",
+      "xgps",
+      "xgpsspeed",
+      "jconsole-java-openjdk"
+    ],
+    "System": [
+      "jshell-java-openjdk",
+      "kitty",
+      "btrfs-assistant",
+      "org.cachyos.scx-manager",
+      "btop",
+      "gtk-lshw",
+      "cachyos-hello",
+      "yazi",
+      "cachyos-pi",
+      "lstopo",
+      "avahi-discover",
+      "io.github.ilya_zlobintsev.LACT",
+      "jconsole-java-openjdk",
+      "org.cachyos.KernelManager",
+      "com.shellyorg.shelly",
+      "org.bleachbit.BleachBit"
+    ],
+    "Network": [
+      "clear.py-0.5-x86_64",
+      "org.qbittorrent.qBittorrent",
+      "org.remmina.Remmina",
+      "steam",
+      "io.github.snowyfluffy.freshgram",
+      "discord",
+      "bssh",
+      "firefox",
+      "localsend",
+      "warthunder-launcher",
+      "mango-talker",
+      "bvnc",
+      "org.telegram.desktop",
+      "rudesktop",
+      "AmneziaVPN"
+    ],
+    "DesktopSettings": [
+      "qt6ct",
+      "waypaper"
+    ],
+    "Qt": [
+      "qt6ct",
+      "org.qbittorrent.qBittorrent",
+      "org.rncbc.qtractor",
+      "org.cachyos.scx-manager",
+      "qdbusviewer",
+      "io.github.snowyfluffy.freshgram",
+      "carla-control",
+      "carla",
+      "assistant",
+      "designer",
+      "org.cachyos.KernelManager",
+      "org.telegram.desktop",
+      "linguist",
+      "AmneziaVPN"
+    ],
+    "Office": [
+      "libreoffice-writer",
+      "libreoffice-base",
+      "libreoffice-startcenter",
+      "libreoffice-impress",
+      "obsidian",
+      "libreoffice-math",
+      "libreoffice-calc",
+      "libreoffice-draw"
+    ],
+    "WordProcessor": [
+      "libreoffice-writer"
+    ],
+    "X-Red-Hat-Base": [
+      "libreoffice-writer",
+      "libreoffice-base",
+      "gtk-lshw",
+      "libreoffice-startcenter",
+      "libreoffice-impress",
+      "libreoffice-math",
+      "libreoffice-calc",
+      "libreoffice-draw"
+    ],
+    "FileTransfer": [
+      "org.qbittorrent.qBittorrent",
+      "steam"
+    ],
+    "P2P": [
+      "org.qbittorrent.qBittorrent"
+    ],
+    "Audio": [
+      "spotify-launcher",
+      "org.rncbc.qtractor",
+      "lsp-plugins",
+      "org.pulseaudio.pavucontrol",
+      "spotifast"
+    ],
+    "Music": [
+      "spotify-launcher",
+      "spotifast"
+    ],
+    "Player": [
+      "spotify-launcher",
+      "spotifast"
+    ],
+    "AudioVideo": [
+      "spotify-launcher",
+      "org.rncbc.qtractor",
+      "lsp-plugins",
+      "org.pulseaudio.pavucontrol",
+      "carla-control",
+      "qv4l2",
+      "carla",
+      "qvidcap",
+      "spotifast"
+    ],
+    "Midi": [
+      "org.rncbc.qtractor"
+    ],
+    "Sequencer": [
+      "org.rncbc.qtractor"
+    ],
+    "X-Multitrack": [
+      "org.rncbc.qtractor"
+    ],
+    "X-Alsa": [
+      "org.rncbc.qtractor"
+    ],
+    "X-Jack": [
+      "org.rncbc.qtractor"
+    ],
+    "TerminalEmulator": [
+      "kitty"
+    ],
+    "Monitor": [
+      "btop",
+      "lstopo"
+    ],
+    "ConsoleOnly": [
+      "btop",
+      "yazi"
+    ],
+    "Database": [
+      "libreoffice-base",
+      "letos"
+    ],
+    "X-Fedora": [
+      "gtk-lshw"
+    ],
+    "Debugger": [
+      "qdbusviewer"
+    ],
+    "AudioVideoEditing": [
+      "lsp-plugins"
+    ],
+    "Mixer": [
+      "org.pulseaudio.pavucontrol"
+    ],
+    "X-XFCE-SettingsDialog": [
+      "org.pulseaudio.pavucontrol"
+    ],
+    "X-XFCE-HardwareSettings": [
+      "org.pulseaudio.pavucontrol"
+    ],
+    "Chat": [
+      "io.github.snowyfluffy.freshgram",
+      "org.telegram.desktop"
+    ],
+    "InstantMessaging": [
+      "io.github.snowyfluffy.freshgram",
+      "discord",
+      "mango-talker",
+      "org.telegram.desktop"
+    ],
+    "Image": [
+      "com.system76.CosmicViewer"
+    ],
+    "Media": [
+      "com.system76.CosmicViewer"
+    ],
+    "HardwareSettings": [
+      "nvidia-settings"
+    ],
+    "X-SuSE-Core-Office": [
+      "libreoffice-startcenter"
+    ],
+    "X-AudioEditing": [
+      "carla-control",
+      "carla"
+    ],
+    "Building": [
+      "cmake-gui"
+    ],
+    "Maps": [
+      "xgps",
+      "xgpsspeed"
+    ],
+    "FileManager": [
+      "yazi",
+      "org.gnome.Nautilus"
+    ],
+    "FileTools": [
+      "yazi"
+    ],
+    "Presentation": [
+      "libreoffice-impress"
+    ],
+    "WebBrowser": [
+      "firefox"
+    ],
+    "Documentation": [
+      "assistant"
+    ],
+    "Recorder": [
+      "io.github.seadve.Kooha"
+    ],
+    "IDE": [
+      "dev.zed.Zed",
+      "code-oss"
+    ],
+    "Education": [
+      "libreoffice-math"
+    ],
+    "Science": [
+      "libreoffice-math"
+    ],
+    "Math": [
+      "libreoffice-math"
+    ],
+    "RemoteAccess": [
+      "rudesktop"
+    ],
+    "PackageManager": [
+      "net.lutris.Lutris"
+    ],
+    "Spreadsheet": [
+      "libreoffice-calc"
+    ],
+    "Core": [
+      "org.gnome.Nautilus"
+    ],
+    "Security": [
+      "AmneziaVPN"
+    ],
+    "FlowChart": [
+      "libreoffice-draw"
+    ],
+    "2DGraphics": [
+      "libreoffice-draw"
+    ],
+    "VectorGraphics": [
+      "libreoffice-draw"
+    ]
+  }
+}

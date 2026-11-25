@@ -1,0 +1,29 @@
+# Сгенерировано wallust из satty.tmpl — правки затрутся при смене обоев.
+# Токены (Theme.qml): шрифт Noto Sans Mono, скругление аннотаций 9
+[general]
+title = "Satty"
+app-id = "org.satty.satty"
+output-filename = "~/Pictures/Screenshots/edited-%Y-%m-%d_%H-%M-%S.png"
+copy-command = "wl-copy"
+early-exit = ["copy"]
+actions-on-enter = ["save-to-clipboard"]
+actions-on-escape = ["exit"]
+corner-roundness = 9
+initial-tool = "brush"
+no-window-decoration = true
+
+[font]
+family = "Noto Sans Mono"
+style = "Regular"
+
+[color-palette]
+palette = [
+    "#54585Fff",
+    "#7E706Eff",
+    "#697687ff",
+    "#8E6F68ff",
+    "#6D9BAAff",
+    "#A9A499ff",
+    "#A2A09Bff",
+    "#F5F2EDff",
+]

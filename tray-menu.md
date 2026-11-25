@@ -1,6 +1,23 @@
 # Меню трея в стиле капсул — план релизации
 
-Статус: **план**, не задание на выполнение. Пункт роадмапа: «Собственное меню трея через `QsMenuOpener` в стиле капсул (если системное меню не устраивает)» (`niri-rice-roadmap.md`, этап 4). Решение о старте принимает пользователь после ворот этапа 0.
+Статус: **выполнен и принят пользователем 2026-11-01** (пункт роадмапа «Собственное меню трея через `QsMenuOpener` в стиле капсул», этап 4 — закрыт).
+
+## Что сделано и проверено на стенде (2026-10-31)
+
+- `services/Config.qml`: тумблер `trayMenuCustom: true` — свои меню; `false` — системное `QsMenuAnchor` как раньше (проверено: при `false` правый клик открывает системное меню того же приложения).
+- `services/TrayMenu.qml` (`pragma Singleton`): `QsMenuOpener`, построение строк (`buildRows`: разделитель «линия в строке после разделителя» — чтобы не было binding loop), `show`/`close`/`activate`/`submenu`, `Panels.close()` при открытии.
+- `components/TrayMenuContent.qml`: строки (текст через `BarText`), hover-подсветка капсулой, чекбоксы `[x]`/`[ ]`, стрелка `>` у подменю, Esc → `TrayMenu.close()`.
+- `components/Tray.qml`: ПКМ → `TrayMenu.show(item, icon, menuWindow)` при `Config.trayMenuCustom`, иначе `menu.open()`; `PopupWindow` (`grabFocus: true`) с карточкой, якорь `anchor.window` через `TrayMenu.anchorItem.QsWindow.window`, `rect` из `itemRect()` в `Connections onAnchoring`.
+- Токен `Theme.trayMenuMaxHeight: 480`.
+- Замер: левый край карточки 1718 = левый край иконки 1719, верх под иконкой.
+
+Проверено сквозным тестом (инъекция ввода + скриншоты): открытие ПКМ у иконки, положение под иконкой и поверх окон, hover строки, клик по пункту (activate + закрытие), закрытие по клику вне (`grabFocus`), обе ветки `trayMenuCustom`, лог без WARN/ERROR/undefined/nan.
+
+Стендом не покрывались (проверять при появлении проблем): Esc, подменю (`entry.display(...)` — в меню Steam/spotify подменю нет), чекбоксы, второй монитор, взаимоисключение с лаунчером/панелями.
+
+Отклонение от плана: `QsMenuAnchor` в `Tray.qml` **не удалён** — он обслуживает ветку `Config.trayMenuCustom: false` (отключение своих меню: выставить `false` и перезапустить `qs`).
+
+Примечание для отладки: `console.log` из QML попадает в `/run/user/1000/quickshell/by-id/<id>/log.qslog` (бинарный, искать `grep -a`), а не в `~/qs.log`.
 
 ## Контекст (проверено на установленном Quickshell 0.3.2)
 

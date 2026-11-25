@@ -45,6 +45,8 @@ Singleton {
     readonly property int gridIconSize: 40
     readonly property int gridFontSize: 12
 
+    readonly property int launcherTabsHeight: capsuleHeight
+
     readonly property int powerItems: 3
     readonly property int powerIconSize: 18
     readonly property int powerMenuHeight: spacing * 2 + rowHeight * powerItems + spacing * (powerItems - 1)
@@ -91,9 +93,20 @@ Singleton {
     readonly property int calendarWidth: calendarCell * 7 + spacing * 2
     readonly property int calendarHeight: spacing * 4 + rowHeight + calendarWeekdayHeight + calendarCell * 6
 
-    readonly property int launcherHeight: panelPadding * 2 + rowHeight + spacing + gridCellHeight * gridRows
+    readonly property int trayMenuMaxHeight: 480
+
+    readonly property int launcherHeight: panelPadding * 2 + rowHeight + spacing + launcherTabsHeight
+        + spacing + gridCellHeight * gridRows
     readonly property int launcherMs: 260
     readonly property real launcherOpacity: 0.85
+
+    readonly property int wallpaperButtonSize: rowHeight
+    readonly property int wallpaperThumbWidth: 160
+    readonly property int wallpaperThumbHeight: 90
+    readonly property int wallpaperRowHeight: wallpaperThumbHeight
+    readonly property int wallpaperCacheBuffer: wallpaperThumbWidth
+    readonly property int wallpaperPreviewHeight: launcherHeight - panelPadding * 2
+        - rowHeight - wallpaperRowHeight - spacing * 2
 
     readonly property int animationMs: 150
 }

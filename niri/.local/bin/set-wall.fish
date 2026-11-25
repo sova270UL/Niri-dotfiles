@@ -42,6 +42,27 @@ end
 # mako читает конфиг только при перезагрузке
 makoctl reload
 
+# Светлая/тёмная тему системы по яркости фона обоев, чтобы приложения
+# подхватили соответствующую тему (GTK цветовая схема и оформление).
+if command -v gsettings >/dev/null 2>&1 && command -v python3 >/dev/null 2>&1
+    set -l scheme (python3 -c '
+import json, os
+c = json.load(open(os.path.expanduser("~/.config/quickshell/niri/theme/colors.json")))
+h = c["background"].lstrip("#")
+r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255
+print("prefer-dark" if lum < 0.5 else "prefer-light")
+' 2>/dev/null)
+    if test -n "$scheme"
+        gsettings set org.gnome.desktop.interface color-scheme "$scheme" >/dev/null 2>&1 || true
+        if test "$scheme" = "prefer-dark"
+            gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark" >/dev/null 2>&1 || true
+        else
+            gsettings set org.gnome.desktop.interface gtk-theme "Adwaita" >/dev/null 2>&1 || true
+        end
+    end
+end
+
 # Запоминаем выбор
 mkdir -p (dirname $state_file)
 echo $wall > $state_file
