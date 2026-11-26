@@ -173,6 +173,7 @@ PanelWindow {
     Component { id: volumeComponent; VolumeOsdContent {} }
     Component { id: mediaComponent; MediaContent {} }
     Component { id: wallpaperComponent; WallpaperContent {} }
+    Component { id: calendarComponent; CalendarContent {} }
 
     Loader {
         active: root.panelHere || root.osdHere || root.expanded
